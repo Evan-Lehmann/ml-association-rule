@@ -1,16 +1,16 @@
 # ml-association-rule
-This project demonstrates the use of association rule, an unsupervised learning method. The association rule algorithm is integrated in a web app and performs Market Basket Analysis on a [dataset](https://github.com/Evan-Lehmann/ml-association-rule/tree/main/data) of grocery transactions. This project was done primarily in Python but also uses Jupyter Notebook. A deployed demo of this app can be found under the [Deployed Demo](#demo) section.
+This project demonstrates the use of association rule, an unsupervised learning method. The association rule algorithm is integrated in a web app and performs Market Basket Analysis on a dataset of grocery transactions. This project was done primarily in Python but also uses Jupyter Notebook. A deployed demo of this app can be found under the [Deployed Demo](#demo) section.
 
 ## General Info
 - Web App
   - File Info
     - [app.py](https://github.com/Evan-Lehmann/ml-association-rule/blob/main/app.py) compiles the individual pages into a multipage web app.
-    - [multiapp.py](https://github.com/Evan-Lehmann/ml-association-rule/blob/main/multiapp.py) acts as a framework that allows multipage web apps.
+    - [multipage.py](https://github.com/Evan-Lehmann/ml-association-rule/blob/main/multipage.py) acts as a framework that allows multipage web apps.
     - [app_pages](https://github.com/Evan-Lehmann/ml-association-rule/tree/main/app_pages) contains the different pages of the web app.
     - [model.py](https://github.com/Evan-Lehmann/ml-association-rule/blob/main/app_pages/model.py) 
       - Contains the model itself and the original dataset.
         - The parameters can be altered. See [Algorithm](#algorithm) for more information on the algorithm and its parameters and see [Usage](#usage) for information on how to actually use the model.
-        - Once the paramters are entered, a dataset will be generated, revealing the association rules (or itemsets depending on metric used).
+        - Once the paramters are entered, a dataset will be generated revealing the association rules (or itemsets depending on metric used).
     - [dashboard.py](https://github.com/Evan-Lehmann/ml-association-rule/blob/main/app_pages/dashboard.py)
       - Dashboard with descriptive charts and statistics from the data.  
 - Jupyter  Notebook
@@ -19,7 +19,7 @@ This project demonstrates the use of association rule, an unsupervised learning 
 ## <a name="algorithm">Algorithm</a>
 - The association rule algorithm used is Apriori, see [here](http://rasbt.github.io/mlxtend/user_guide/frequent_patterns/association_rules/#association-rules-generation-from-frequent-itemsets) for full documentation on the algorithm.
   - Association Rules:
-    - The algorith returns association rules, which are given in pairs (antecedent and consequent).
+    - The algorithm returns association rules, which are given in pairs (antecedent and consequent).
     - Association Rules show relationships between data items and are in an if-then format.
   - Paramters (A = antecedent, C = consequent):
     - Support - frequency of itemsets in data, finds frequent itemsets, NOT association rules, value ranges from 0 to 1
